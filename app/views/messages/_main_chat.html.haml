@@ -1,0 +1,43 @@
+.main-ber
+  .main-ber__chat-name
+    .main-ber__chat-name-left
+      .main-ber__chat-name-group
+        techcamp
+      .main-ber__chat-name-member
+        Member:masa
+    .main-ber__chat-name-right 
+      = link_to 'Edit', '#', class:"edit-btn"
+
+  .main-ber__chat-spaces
+    .main-ber__chat-spaces-space
+      %p.main-ber__chat-spaces-space-user
+        masa
+      %p.main-ber__chat-spaces-space-time
+        2019/11/20(Wed) 17:43:01
+      %p.main-ber__chat-spaces-space-text
+        おはよう！
+
+    .main-ber__chat-spaces-space
+      %p.main-ber__chat-spaces-space-user
+        masa
+      %p.main-ber__chat-spaces-space-time
+        2019/11/20(Wed) 17:43:01
+      %p.main-ber__chat-spaces-space-text
+        おはよう！
+
+    .main-ber__chat-spaces-space
+      %p.main-ber__chat-spaces-space-user
+        masa
+      %p.main-ber__chat-spaces-space-time
+        2019/11/20(Wed) 17:43:01
+      %p.main-ber__chat-spaces-space-text
+        おはよう！
+
+  .main-ber__massage-form
+    %form.input-ber
+      .form-input
+        %input{type: "text", class: "form-input__text" ,placeholder: "type a message"}
+        %label{class: "form-input__icon"}
+          =icon('fa', 'image')
+          %input{type:"file", class: "form-input__file"}
+      %input{type: "submit", class: "form-btn", value: "Send"}

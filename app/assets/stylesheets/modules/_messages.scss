@@ -1,0 +1,186 @@
+$white: #ffffff;
+$black: #333333;
+$lightblue: #38aef0;
+$gray: #999999;
+
+.side-ber {
+  height: 100vh;
+  width: 300px;
+  float: left;
+
+  &__user {
+    background-color: #253141;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    .top-ber {
+      height: 20px;
+      width: 260px;
+      font-weight: bold;
+    
+      &__name {
+        color: $white;
+        line-height: 20px;
+        text-align: left;
+      }
+
+      &__items {
+        height: 20px;
+        width: 60px;
+        line-height: 20px;
+        float: right;
+        position: relative;
+        bottom: 20px;
+      
+        &-icon {
+          color: $white;
+          font-size: 0.9em;
+          float: right;
+          position: relative;
+          left: 60px;
+          bottom: 20px;
+          text-decoration: none;
+          line-height: 20px;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+
+  &__groups {
+    background-color: #2f3e51;;
+    height: calc(100vh - 100px);
+  
+    &-group {
+      color: $white;
+      height: 91px;
+      width: 260px;
+      margin: 0 auto;
+    
+      &-name {
+        font-size: 15px;
+        padding-top: 20px;
+        padding-bottom: 5px;
+      }
+
+      &-massage {
+        padding-bottom: 40px;
+        font-size: 11px;
+      }
+    }
+  }
+}
+
+.main-ber {
+  height: 100vh;
+  width: calc(100% - 300px);
+  float: right;
+
+  &__chat-name {
+      background-color: $white;
+      height: 100px;
+      width: calc(100% - 80px);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+ 
+    &-group {
+      color: $black;
+      font-size: 20px;
+      padding: 35px 0px 15px;
+    }
+
+    &-member {
+      color: $gray;
+      font-size: 12px;
+    }
+  
+    &-right {
+      font-size: 16px;
+      padding: 28px 20px;
+    
+      .edit-btn {
+        color: $lightblue;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__chat-spaces {
+    background-color: #fafafa;
+    height: calc(100vh - 191px);
+    border-top: 1px solid #eeeeee;
+
+    &-space {
+      padding: 35px 0px 46px 40px;
+
+      &-user {
+        color: $black;
+        font-size: 16px;
+        display: inline-block;
+      }
+
+      &-time {
+        color: $gray;
+        font-size: 12px;
+        display: inline-block;
+      }
+
+      &-text {
+        color: #434A54;
+        font-size: 14px;
+        padding-top: 12px;
+      }
+    }
+  }
+
+  &__massage-form {
+    background-color: #d2d2d2;
+    height: 90px;
+    width: 100%;
+
+    .input-ber {
+      margin: 0 auto;
+      position:relative;
+      top: 20px;
+      display: flex;
+  
+      .form-input{
+        width: calc(100% - 155px);
+        height: 50px;
+        display: flex;
+        position: relative;
+
+        &__text{
+        height: 50px;
+        width: calc(100% - 15px);
+        padding: 0 40px 0 10px;
+        margin: 0 0 0 40px;
+        }
+        &__icon {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          cursor: pointer;
+          font-size: 1.3rem;
+        }
+        &__file {
+          display: none;
+        }
+      }
+      .form-btn {
+        background-color: $lightblue;
+        height: 50px;
+        width: 100px;
+        color: $white;
+        text-align: center;
+        line-height: 50px;
+        margin: 0 40px 0 auto;
+        cursor: pointer;
+      }
+    }
+  }
+}
