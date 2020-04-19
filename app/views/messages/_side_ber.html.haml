@@ -2,9 +2,9 @@
   .side-ber__user
     .top-ber
       .top-ber__name
-        masa
+        = current_user.name
       .top-ber__items
-      = link_to "#", class: "top-ber__items-icon" do
+      = link_to edit_user_path(current_user), class: "top-ber__items-icon" do
         = icon('fas', 'cog')
       = link_to "#", class: "top-ber__items-icon" do
         = icon('far', 'edit')
