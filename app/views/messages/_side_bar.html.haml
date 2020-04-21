@@ -1,0 +1,19 @@
+.side-ber 
+  .side-ber__user
+    .top-ber
+      .top-ber__name
+        = current_user.name
+      .top-ber__items
+      = link_to edit_user_path(current_user), class: "top-ber__items-icon" do
+        = icon('fas', 'cog')
+      = link_to new_group_path, class: "top-ber__items-icon" do
+        = icon('far', 'edit')
+
+  .side-ber__groups
+    - current_user.groups.each do |group|
+      .side-ber__groups-group
+        = link_to '#' do
+          .side-ber__groups-group-name
+            = group.name
+          .side-ber__groups-group-massage
+            まだメッセージがありません

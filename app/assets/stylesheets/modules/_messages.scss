@@ -51,22 +51,23 @@ $gray: #999999;
 
 
   &__groups {
-    background-color: #2f3e51;;
+    background-color: #2f3e51;
     height: calc(100vh - 100px);
   
     &-group {
-      color: $white;
       height: 91px;
       width: 260px;
       margin: 0 auto;
     
       &-name {
+        color: $white;
         font-size: 15px;
         padding-top: 20px;
         padding-bottom: 5px;
       }
 
       &-massage {
+        color: $white;
         padding-bottom: 40px;
         font-size: 11px;
       }
