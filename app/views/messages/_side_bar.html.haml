@@ -12,7 +12,7 @@
   .side-ber__groups
     - current_user.groups.each do |group|
       .side-ber__groups-group
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .side-ber__groups-group-name
             = group.name
           .side-ber__groups-group-massage

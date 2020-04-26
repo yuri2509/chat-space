@@ -9,29 +9,7 @@
       = link_to 'Edit', '#', class:"edit-btn"
 
   .main-ber__chat-spaces
-    .main-ber__chat-spaces-space
-      %p.main-ber__chat-spaces-space-user
-        masa
-      %p.main-ber__chat-spaces-space-time
-        2019/11/20(Wed) 17:43:01
-      %p.main-ber__chat-spaces-space-text
-        おはよう！
-
-    .main-ber__chat-spaces-space
-      %p.main-ber__chat-spaces-space-user
-        masa
-      %p.main-ber__chat-spaces-space-time
-        2019/11/20(Wed) 17:43:01
-      %p.main-ber__chat-spaces-space-text
-        おはよう！
-
-    .main-ber__chat-spaces-space
-      %p.main-ber__chat-spaces-space-user
-        masa
-      %p.main-ber__chat-spaces-space-time
-        2019/11/20(Wed) 17:43:01
-      %p.main-ber__chat-spaces-space-text
-        おはよう！
+    = render @messages
 
   .main-ber__massage-form
     %form.input-ber
