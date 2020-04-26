@@ -12,10 +12,12 @@
     = render @messages
 
   .main-ber__massage-form
-    %form.input-ber
-      .form-input
-        %input{type: "text", class: "form-input__text" ,placeholder: "type a message"}
-        %label{class: "form-input__icon"}
-          =icon('fa', 'image')
-          %input{type:"file", class: "form-input__file"}
-      %input{type: "submit", class: "form-btn", value: "Send"}
+    .form-input
+      = form_for [@group, @message] do |f|
+        .form_input__text-group
+          = f.text_field :content, class: 'form-input__text', placeholder: 'type a message'
+          .form_mask
+            = f.label :image, class: 'form-input__icon' do
+              = icon('fas', 'image', class: 'icon')
+              = f.file_field :image, class: 'form-input__file'
+        = f.submit 'Send', class: 'form-btn'

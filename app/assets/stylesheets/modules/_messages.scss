@@ -139,49 +139,53 @@ $gray: #999999;
   }
 
   &__massage-form {
-    background-color: #d2d2d2;
+    background-color: #ddd;
     height: 90px;
     width: 100%;
-
-    .input-ber {
-      margin: 0 auto;
-      position:relative;
-      top: 20px;
-      display: flex;
-  
-      .form-input{
-        width: calc(100% - 155px);
-        height: 50px;
+    position:relative;
+    display: flex;
+    align-items: center;
+    
+    .form-input{
+      width: 100%;
+      height: 50px;
+      position: relative;
+        
+      .new_message {
+        top: 20px;
         display: flex;
-        position: relative;
 
-        &__text{
-        height: 50px;
-        width: calc(100% - 15px);
-        padding: 0 40px 0 10px;
-        margin: 0 0 0 40px;
-        }
-        &__icon {
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          cursor: pointer;
-          font-size: 1.3rem;
-        }
-        &__file {
-          display: none;
+        .form_input__text-group {
+          position:relative;
+          width: 100%;
+          .form-input__text{
+            height: 50px;
+            width: calc(100% - 115px);
+            padding: 0 40px 0 10px;
+            margin: 0 0 0 40px;
+          }
+          .form-input__icon {
+            position: absolute;
+            top: 10px;
+            right: 30px;
+            cursor: pointer;
+            font-size: 1.3rem;
+          }
         }
       }
-      .form-btn {
-        background-color: $lightblue;
-        height: 50px;
-        width: 100px;
-        color: $white;
-        text-align: center;
-        line-height: 50px;
-        margin: 0 40px 0 auto;
-        cursor: pointer;
-      }
+    }
+    .form-input__file {
+      display: none;
+    }
+    .form-btn {
+      background-color: $lightblue;
+      height: 50px;
+      width: 100px;
+      color: $white;
+      text-align: center;
+      line-height: 50px;
+      margin-right: 40px;
+      cursor: pointer;
     }
   }
 }
