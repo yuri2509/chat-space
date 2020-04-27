@@ -2,11 +2,14 @@
   .main-ber__chat-name
     .main-ber__chat-name-left
       .main-ber__chat-name-group
-        techcamp
+        = @group.name
       .main-ber__chat-name-member
-        Member:masa
+        Member:
+        - @group.users.each do |user|
+          = user.name
     .main-ber__chat-name-right 
-      = link_to 'Edit', '#', class:"edit-btn"
+      = link_to edit_group_path(@group), class:"edit-btn" do
+        = 'Edit'
 
   .main-ber__chat-spaces
     = render @messages
