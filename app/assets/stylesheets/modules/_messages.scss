@@ -114,7 +114,7 @@ $gray: #999999;
     background-color: #fafafa;
     height: calc(100vh - 191px);
     border-top: 1px solid #eeeeee;
-
+    overflow: scroll;
     &-space {
       padding: 35px 0px 46px 40px;
 
@@ -134,6 +134,7 @@ $gray: #999999;
         color: #434A54;
         font-size: 14px;
         padding-top: 12px;
+        padding-left: 40px;
       }
     }
   }
