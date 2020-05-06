@@ -4,9 +4,9 @@
       .top-ber__name
         = current_user.name
       .top-ber__items
-      = link_to new_group_path, class: "top-ber__items-icon" do
-        = icon('fas', 'cog')
       = link_to edit_user_path(current_user), class: "top-ber__items-icon" do
+        = icon('fas', 'cog')
+      = link_to new_group_path, class: "top-ber__items-icon" do
         = icon('far', 'edit')
 
   .side-ber__groups
