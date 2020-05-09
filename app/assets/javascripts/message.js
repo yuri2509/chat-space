@@ -3,14 +3,12 @@ $(function(){
       if ( message.image ) {
         var html =
           `<div class="main-ber__chat-spaces-space" data-message-id=${message.id}>
-            <div class="main-ber__chat-spaces-space">
-              <p class="main-ber__chat-spaces-space-user">
-                ${message.user_name}
-              </p>
-              <p class="main-ber__chat-spaces-space-time">
-                ${message.created_at}
-              </p>
-            </div>
+            <p class="main-ber__chat-spaces-space-user">
+              ${message.user_name}
+            </p>
+            <p class="main-ber__chat-spaces-space-time">
+              ${message.created_at}
+            </p>
           </div>
           <div class="main-ber__chat-spaces-lower">
             <p class="main-ber__chat-spaces-space-text">
@@ -22,15 +20,13 @@ $(function(){
       } else {
         var html =
           `<div class="main-ber__chat-spaces-space" data-message-id=${message.id}>
-            <div class="main-ber__chat-spaces-space">
-              <p class="main-ber__chat-spaces-space-user">
-                ${message.user_name}
-              </p>
-              <p class="main-ber__chat-spaces-space-time">
-                ${message.created_at}
-              </p>
-            </div>
-          <
+            <p class="main-ber__chat-spaces-space-user">
+              ${message.user_name}
+            </p>
+            <p class="main-ber__chat-spaces-space-time">
+              ${message.created_at}
+            </p>
+          </div>
           <div class="main-ber__chat-spaces-lower">
             <p class="main-ber__chat-spaces-space-text">
               ${message.content}
@@ -64,7 +60,7 @@ $(function(){
   })
 
   var reloadMessages = function() {
-    var last_message_id = $('.message:last').data("message-id");
+    var last_message_id = $('.main-ber__chat-spaces-space:last').data("message-id");
     $.ajax({
       url: "api/messages",
       type: 'get',
@@ -77,8 +73,8 @@ $(function(){
         $.each(messages, function(i, message) {
           insertHTML += buildHTML(message)
         });
-        $('.main-ber__chat-spaces-space').append(insertHTML);
-        $('.main-ber__chat-spaces-space').animate({ scrollTop: $('.messages')[0].scrollHeight});
+        $('.main-ber__chat-spaces').append(insertHTML);
+        $('.main-ber__chat-spaces').animate({ scrollTop: $('.main-ber__chat-spaces')[0].scrollHeight});
       } 
     })
     .fail(function() {
@@ -86,4 +82,6 @@ $(function(){
     });
   };
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
+    setInterval(reloadMessages, 7000);
+  }
 });
