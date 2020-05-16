@@ -101,11 +101,15 @@ $gray: #999999;
   
     &-right {
       font-size: 16px;
-      padding: 28px 20px;
+      margin-top: 29px;
     
       .edit-btn {
+        height: 40px;
+        line-height: 40px;
+        padding: 11px 20px;
         color: $lightblue;
         text-decoration: none;
+        border: solid 1px $lightblue;
       }
     }
   }
@@ -116,11 +120,12 @@ $gray: #999999;
     border-top: 1px solid #eeeeee;
     overflow: scroll;
     &-space {
-      padding: 35px 0px 46px 40px;
+      padding: 35px 0px 10px 40px;
 
       &-user {
         color: $black;
         font-size: 16px;
+        font-weight: bold;
         display: inline-block;
       }
 
@@ -129,11 +134,15 @@ $gray: #999999;
         font-size: 12px;
         display: inline-block;
       }
-
-      &-text {
+    }
+    &-lower {
+      .main-ber__chat-spaces-space-text {
         color: #434A54;
         font-size: 14px;
-        padding-top: 12px;
+        padding-left: 40px;
+      }
+
+      .lower-message__image {
         padding-left: 40px;
       }
     }
