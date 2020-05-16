@@ -36,7 +36,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 group :production do
-  gem 'unicorn', '5.4.1'
+  gem 'unicorn', '5.5.3'
+  # gem 'unicorn', '5.4.1'
 end
 
 group :development, :test do
